@@ -51,4 +51,15 @@ public class TennisGameTest {
 		
 		assertThat(tennisGame.getGameScore(), equalTo(expectedScore));
 	}
+	
+	@Test
+	public void whenPlayer2Wins3Points_thenScoreShouldBe0_40() {
+		GameScore expectedScore = new GameScore(0, 40);
+		
+		tennisGame.playerTwoWinsPoint();
+		tennisGame.playerTwoWinsPoint();
+		tennisGame.playerTwoWinsPoint();
+		
+		assertThat(tennisGame.getGameScore(), equalTo(expectedScore));
+	}
 }

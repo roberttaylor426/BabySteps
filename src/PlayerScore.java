@@ -14,7 +14,9 @@ public class PlayerScore {
 	void incrementScore() {
 		if (score == 15)
 			score = 30;
-		else
+		else if (score ==  30)
+			score = 40;
+		else 
 			score = 15;
 	}
 
