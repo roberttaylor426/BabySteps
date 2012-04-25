@@ -15,4 +15,8 @@ public class TennisGame {
 		score.incrementPlayerTwoScore();
 	}
 
+	public boolean hasPlayer2Won() {
+		return true;
+	}
+
 }

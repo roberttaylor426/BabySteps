@@ -62,4 +62,15 @@ public class TennisGameTest {
 		
 		assertThat(tennisGame.getGameScore(), equalTo(expectedScore));
 	}
+	
+	@Test
+	public void name() {
+		
+		tennisGame.playerTwoWinsPoint();
+		tennisGame.playerTwoWinsPoint();
+		tennisGame.playerTwoWinsPoint();
+		tennisGame.playerTwoWinsPoint();
+		
+		assertThat(tennisGame.hasPlayer2Won(), equalTo(true));
+	}
 }
