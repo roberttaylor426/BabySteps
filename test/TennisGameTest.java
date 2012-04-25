@@ -16,39 +16,39 @@ public class TennisGameTest {
 	
 	@Test
 	public void whenPlayer1Wins_thenScoreShouldBe15_0() {
-		OldScore expectedScore = new OldScore(15, 0);
+		GameScore expectedScore = new GameScore(15, 0);
 		
 		tennisGame.playerOneWinsPoint();
 		
-		assertThat(tennisGame.getScore(), equalTo(expectedScore));
+		assertThat(tennisGame.getGameScore(), equalTo(expectedScore));
 	}
 
 	@Test
 	public void whenPlayer2Wins_thenScoreShouldBe0_15() {
-		OldScore expectedScore = new OldScore(0, 15);
+		GameScore expectedScore = new GameScore(0, 15);
 		
 		tennisGame.playerTwoWinsPoint();
 		
-		assertThat(tennisGame.getScore(), equalTo(expectedScore));
+		assertThat(tennisGame.getGameScore(), equalTo(expectedScore));
 	}
 	
 	@Test
 	public void whenPlayer1Wins2Points_thenScoreShouldBe30_0() {
-		OldScore expectedScore = new OldScore(30, 0);
+		GameScore expectedScore = new GameScore(30, 0);
 		
 		tennisGame.playerOneWinsPoint();
 		tennisGame.playerOneWinsPoint();
 		
-		assertThat(tennisGame.getScore(), equalTo(expectedScore));
+		assertThat(tennisGame.getGameScore(), equalTo(expectedScore));
 	}
 	
 	@Test
 	public void whenPlayer2Wins2Points_thenScoreShouldBe0_30() {
-		OldScore expectedScore = new OldScore(0, 30);
+		GameScore expectedScore = new GameScore(0, 30);
 		
 		tennisGame.playerTwoWinsPoint();
 		tennisGame.playerTwoWinsPoint();
 		
-		assertThat(tennisGame.getScore(), equalTo(expectedScore));
+		assertThat(tennisGame.getGameScore(), equalTo(expectedScore));
 	}
 }

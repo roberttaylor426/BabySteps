@@ -1,9 +1,9 @@
 
-public class Score {
+public class PlayerScore {
 
 	private int score;
 	
-	public Score(int playerOneScore) {
+	public PlayerScore(int playerOneScore) {
 		score = playerOneScore;
 	}
 
@@ -34,7 +34,7 @@ public class Score {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Score other = (Score) obj;
+		PlayerScore other = (PlayerScore) obj;
 		if (score != other.score)
 			return false;
 		return true;

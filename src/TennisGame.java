@@ -1,14 +1,14 @@
 
 public class TennisGame {
 
-	private OldScore score = new OldScore(0, 0);
+	private GameScore score = new GameScore(0, 0);
 
+	public GameScore getGameScore() {
+		return score;
+	}
+	
 	public void playerOneWinsPoint() {
 		score.incrementPlayerOneScore();
-	}
-
-	public OldScore getScore() {
-		return score;
 	}
 
 	public void playerTwoWinsPoint() {
