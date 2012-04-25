@@ -2,14 +2,16 @@
 public class Score {
 
 	private final int playerOneScore;
-	private final int j;
+	private final int playerTwoScore;
 
-	public Score(int i, int j) {
-		this.playerOneScore = i;
-		this.j = j;
+	public Score(int playerOneScore, int playerTwoScore) {
+		this.playerOneScore = playerOneScore;
+		this.playerTwoScore = playerTwoScore;
 	}
 
 	public boolean equals(Object o) {
+		
+		
 		return true;
 	}
 }
