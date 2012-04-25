@@ -1,16 +1,12 @@
 
 public class Score {
 
-	private IndividualPlayerScore iPlayerOneScore = new IndividualPlayerScore();
-	int playerOneScore;
+	private final IndividualPlayerScore iPlayerOneScore;
 	private int playerTwoScore;
 
 	public Score(int playerOneScore, int playerTwoScore) {
-		this.playerOneScore = playerOneScore;
+		this.iPlayerOneScore = new IndividualPlayerScore(playerOneScore);
 		this.playerTwoScore = playerTwoScore;
-	}
-	public void setPlayerOneScore(int playerOneScore) {
-		this.playerOneScore = playerOneScore;
 	}
 	
 	public void setPlayerTwoScore(int playerTwoScore) {
@@ -23,11 +19,11 @@ public class Score {
 			return false;
 		
 		Score targetScore = (Score)o;
-		return targetScore.playerOneScore == playerOneScore && playerTwoScore == targetScore.playerTwoScore;
+		return targetScore.iPlayerOneScore.equals(iPlayerOneScore) && playerTwoScore == targetScore.playerTwoScore;
 	}
 	
 	public void incrementPlayerOneScore() {
-		iPlayerOneScore.method(this);
+		iPlayerOneScore.method();
 		
 	}
 	public void incrementPlayerTwoScore() {

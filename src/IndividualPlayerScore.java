@@ -3,15 +3,41 @@ public class IndividualPlayerScore {
 
 	private int score;
 	
+	public IndividualPlayerScore(int playerOneScore) {
+		score = playerOneScore;
+	}
+
 	public int getScore() {
 		return score;
 	}
 
-	void method(Score score) {
-		if (score.playerOneScore == 15)
-			score.playerOneScore = 30;
+	void method() {
+		if (score == 15)
+			score = 30;
 		else
-			score.playerOneScore = 15;
+			score = 15;
+	}
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + score;
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		IndividualPlayerScore other = (IndividualPlayerScore) obj;
+		if (score != other.score)
+			return false;
+		return true;
 	}
 
 	
