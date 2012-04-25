@@ -8,7 +8,7 @@ public class TennisGame {
 	}
 
 	public Score getScore() {
-		return new Score(15, 0);
+		return score;
 	}
 
 	public void playerTwoWinsPoint() {
