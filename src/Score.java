@@ -26,10 +26,17 @@ public class Score {
 	}
 	
 	public void incrementPlayerOneScore() {
-		playerOneScore = 15;
+		if (playerOneScore == 15)
+			playerOneScore = 30;
+		else
+			playerOneScore = 15;
 		
 	}
 	public void incrementPlayerTwoScore() {
-		playerTwoScore = 15;
+		
+		if (playerTwoScore == 15)
+			playerTwoScore = 30;
+		else
+			playerTwoScore = 15;
 	}
 }
