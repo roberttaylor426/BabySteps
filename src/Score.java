@@ -18,11 +18,11 @@ public class Score {
 
 	public boolean equals(Object o) {
 		
-		if (o instanceof Score){
-			Score targetScore = (Score)o;
-			return targetScore.playerOneScore == playerOneScore && playerTwoScore == targetScore.playerTwoScore;
-		}
-		return true;
+		if (!(o instanceof Score))
+			return false;
+		
+		Score targetScore = (Score)o;
+		return targetScore.playerOneScore == playerOneScore && playerTwoScore == targetScore.playerTwoScore;
 	}
 	
 	public void incrementPlayerOneScore() {

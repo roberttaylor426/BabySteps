@@ -16,19 +16,19 @@ public class TennisGameTest {
 	
 	@Test
 	public void whenPlayer1Wins_thenScoreShouldBe15_0() {
-		Score score = new Score(15, 0);
+		Score expectedScore = new Score(15, 0);
 		
 		tennisGame.playerOneWinsPoint();
 		
-		assertThat(tennisGame.getScore(), equalTo(score));
+		assertThat(tennisGame.getScore(), equalTo(expectedScore));
 	}
 
 	@Test
 	public void whenPlayer2Wins_thenScoreShouldBe0_15() {
-		Score score = new Score(0, 15);
+		Score expectedScore = new Score(0, 15);
 		
 		tennisGame.playerTwoWinsPoint();
 		
-		assertThat(tennisGame.getScore(), equalTo(score));
+		assertThat(tennisGame.getScore(), equalTo(expectedScore));
 	}
 }
