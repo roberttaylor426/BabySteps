@@ -16,7 +16,7 @@ public class TennisGameTest {
 	
 	@Test
 	public void whenPlayer1Wins_thenScoreShouldBe15_0() {
-		Score expectedScore = new Score(15, 0);
+		OldScore expectedScore = new OldScore(15, 0);
 		
 		tennisGame.playerOneWinsPoint();
 		
@@ -25,7 +25,7 @@ public class TennisGameTest {
 
 	@Test
 	public void whenPlayer2Wins_thenScoreShouldBe0_15() {
-		Score expectedScore = new Score(0, 15);
+		OldScore expectedScore = new OldScore(0, 15);
 		
 		tennisGame.playerTwoWinsPoint();
 		
@@ -34,7 +34,7 @@ public class TennisGameTest {
 	
 	@Test
 	public void whenPlayer1Wins2Points_thenScoreShouldBe30_0() {
-		Score expectedScore = new Score(30, 0);
+		OldScore expectedScore = new OldScore(30, 0);
 		
 		tennisGame.playerOneWinsPoint();
 		tennisGame.playerOneWinsPoint();
@@ -44,7 +44,7 @@ public class TennisGameTest {
 	
 	@Test
 	public void whenPlayer2Wins2Points_thenScoreShouldBe0_30() {
-		Score expectedScore = new Score(0, 30);
+		OldScore expectedScore = new OldScore(0, 30);
 		
 		tennisGame.playerTwoWinsPoint();
 		tennisGame.playerTwoWinsPoint();

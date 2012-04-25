@@ -1,29 +1,44 @@
 
 public class Score {
 
-	private final IndividualPlayerScore iPlayerOneScore;
-	private final IndividualPlayerScore iPlayerTwoScore;
-
-	public Score(int playerOneScore, int playerTwoScore) {
-		this.iPlayerOneScore = new IndividualPlayerScore(playerOneScore);
-		this.iPlayerTwoScore = new IndividualPlayerScore(playerTwoScore);
-	}
+	private int score;
 	
+	public Score(int playerOneScore) {
+		score = playerOneScore;
+	}
 
-	public boolean equals(Object o) {
-		
-		if (!(o instanceof Score))
+	public int getScore() {
+		return score;
+	}
+
+	void incrementScore() {
+		if (score == 15)
+			score = 30;
+		else
+			score = 15;
+	}
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + score;
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
 			return false;
-		
-		Score targetScore = (Score)o;
-		return targetScore.iPlayerOneScore.equals(iPlayerOneScore) && targetScore.iPlayerTwoScore.equals(iPlayerTwoScore);
+		if (getClass() != obj.getClass())
+			return false;
+		Score other = (Score) obj;
+		if (score != other.score)
+			return false;
+		return true;
 	}
+
 	
-	public void incrementPlayerOneScore() {
-		iPlayerOneScore.method();
-		
-	}
-	public void incrementPlayerTwoScore() {
-		iPlayerTwoScore.method();
-	}
 }
