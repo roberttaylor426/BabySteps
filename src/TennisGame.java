@@ -6,8 +6,8 @@ public class TennisGame {
 		
 	}
 
-	public String getScore() {
-		return "15-0";
+	public Score getScore() {
+		return new Score(15, 0);
 	}
 
 }

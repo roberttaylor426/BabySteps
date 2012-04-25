@@ -16,9 +16,11 @@ public class TennisGameTest {
 	
 	@Test
 	public void whenPlayer1Wins_thenScoreShouldBe15_0() {
+		Score score = new Score(15, 0);
+		
 		tennisGame.playerOneWinsPoint();
 		
-		assertThat(tennisGame.getScore(), equalTo("15-0"));
+		assertThat(tennisGame.getScore(), equalTo(score));
 	}
 	
 }
