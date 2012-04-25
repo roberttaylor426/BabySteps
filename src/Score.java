@@ -26,11 +26,14 @@ public class Score {
 	}
 	
 	public void incrementPlayerOneScore() {
+		method();
+		
+	}
+	private void method() {
 		if (playerOneScore == 15)
 			playerOneScore = 30;
 		else
 			playerOneScore = 15;
-		
 	}
 	public void incrementPlayerTwoScore() {
 		
