@@ -1,9 +1,10 @@
 
 public class TennisGame {
 
+	private Score score = new Score(0, 0);
+
 	public void playerOneWinsPoint() {
-		// TODO Auto-generated method stub
-		
+		score.incrementPlayerOneScore();
 	}
 
 	public Score getScore() {
@@ -11,8 +12,7 @@ public class TennisGame {
 	}
 
 	public void playerTwoWinsPoint() {
-		// TODO Auto-generated method stub
-		
+		score.incrementPlayerTwoScore();
 	}
 
 }

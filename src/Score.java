@@ -2,7 +2,6 @@
 public class Score {
 
 	private int playerOneScore;
-
 	private int playerTwoScore;
 
 	public Score(int playerOneScore, int playerTwoScore) {
@@ -21,5 +20,13 @@ public class Score {
 		
 		
 		return true;
+	}
+	
+	public void incrementPlayerOneScore() {
+		playerOneScore = 15;
+		
+	}
+	public void incrementPlayerTwoScore() {
+		playerTwoScore = 15;
 	}
 }
