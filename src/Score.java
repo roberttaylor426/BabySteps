@@ -1,7 +1,8 @@
 
 public class Score {
 
-	private int playerOneScore;
+	private IndividualPlayerScore iPlayerOneScore = new IndividualPlayerScore();
+	int playerOneScore;
 	private int playerTwoScore;
 
 	public Score(int playerOneScore, int playerTwoScore) {
@@ -26,14 +27,8 @@ public class Score {
 	}
 	
 	public void incrementPlayerOneScore() {
-		method();
+		iPlayerOneScore.method(this);
 		
-	}
-	private void method() {
-		if (playerOneScore == 15)
-			playerOneScore = 30;
-		else
-			playerOneScore = 15;
 	}
 	public void incrementPlayerTwoScore() {
 		
